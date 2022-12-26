@@ -6,4 +6,13 @@ server:
 logging:
     level:
         root: INFO
-        '[com.microservices]': DEBUG;
+        '[com.microservices]': DEBUG
+---
+spring:
+    config:
+        activate:
+            on-profile: docker
+server:
+    port: 8080
+    error:
+        include-message: always
